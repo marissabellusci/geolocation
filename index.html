@@ -68,6 +68,9 @@ navigator.geolocation.watchPosition((data) => { //watchPosition gives updates, a
   speed.textContent = data.coords.speed;
   arrow.style.transform = `rotate(${data.coords.heading}deg)`;
 
+}, (err) => {
+  console.err(err);
+  alert('Error! Please allow location access to continue.')
 }); 
 
   </script>
